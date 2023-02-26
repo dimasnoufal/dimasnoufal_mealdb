@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">dimasnoufal_mealdb</string>
+    <string name="nama_makanan">Nama Makanan</string>
+    <string name="favorite">Favorite</string>
+    <string name="failed_to_fetch_data">Failed to fetch data.</string>
+    <string name="seafood_list">Seafood List : </string>
+    <string name="my_favorite_meal">My Favorite Meal : </string>
+    <string name="warning">warning</string>
+    <string name="poster">Poster</string>
+    <string name="id_52959">52959</string>
+    <string name="seafood">Seafood</string>
+    <string name="british">British</string>
+    <string name="how_to_cook">How to cook : </string>
+    <string name="lorem_ipsum">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</string>
+    <string name="save_to_favorite">Save to Favorit</string>
+    <string name="remove_from_favorite">Remove from favorite</string>
+    <string name="add_to_favorite">Add To Favorite</string>
+    <string name="id">ID:</string>
+    <string name="rekomendasi_meal">rekomendasi meal</string>
+    <string name="recommendation_meal">Recommendation Meal:</string>
+</resources>
