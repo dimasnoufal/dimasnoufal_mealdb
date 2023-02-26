@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 
 @Database(
     entities = [MealEntity::class],
-    version = 2,
+    version = 1,
     exportSchema = false
 )
 
@@ -30,7 +30,7 @@ abstract class MealDatabase : RoomDatabase() {
             synchronized(this) {
                 val newInstance = Room.databaseBuilder(
                     ctx.applicationContext, MealDatabase::class.java,
-                    "meal_database"
+                    "meal"
                 ).fallbackToDestructiveMigration()
                     .build()
 

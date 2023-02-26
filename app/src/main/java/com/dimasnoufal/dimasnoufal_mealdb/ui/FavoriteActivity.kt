@@ -44,7 +44,7 @@ class FavoriteActivity : AppCompatActivity() {
                     setOnItemClickCallback(object:FavoriteAdapter.IOnFavoriteItemCallBack{
                         override fun onFavoriteItemClickCallback(data: MealEntity) {
                             val detailFavorite = Intent(this@FavoriteActivity, FavoriteDetailActivity::class.java)
-                            detailFavorite.putExtra(FavoriteDetailActivity.EXTRA_FAVORITE_GAME,data)
+                            detailFavorite.putExtra(FavoriteDetailActivity.EXTRA_FAVORITE_MEAL,data)
                             startActivity(detailFavorite)
                         }
                     })

@@ -26,21 +26,14 @@ class FavoriteDetailActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setTitle("Favorite Detail Meal")
 
-        val favoriteMeal = intent.getParcelableExtra<MealEntity>(EXTRA_FAVORITE_GAME)
-//        val result = favoriteMeal!!.meal.meals
-//        for (dataMeal in result!!) {
-            binding.apply {
-                Glide.with(this@FavoriteDetailActivity)
-                    .load(favoriteMeal?.meal?.strMealThumb)
-                    .error(R.drawable.img_placeholder)
-                    .into(ivDetailPoster)
-                tvMealName.text = favoriteMeal?.meal?.strMeal
-                tvIdMeal.text = favoriteMeal?.meal?.idMeal
-                tvFoodType.text = favoriteMeal?.meal?.strCategory
-                tvLocation.text = favoriteMeal?.meal?.strArea
-                tvInstructions.text = favoriteMeal?.meal?.strInstructions
-            }
-//        }
+        var favoriteMeal = intent.getParcelableExtra<MealEntity>(EXTRA_FAVORITE_MEAL)
+        binding.mealFavoriteDetail = favoriteMeal!!.meal
+        binding.apply {
+            Glide.with(this@FavoriteDetailActivity)
+                .load(favoriteMeal.meal?.strMealThumb)
+                .error(R.drawable.img_placeholder)
+                .into(ivDetailPoster)
+        }
 
         favoriteDetailViewModel.fetchListMeal()
         favoriteDetailViewModel.recommendationList.observe(this) { res ->
@@ -48,7 +41,11 @@ class FavoriteDetailActivity : AppCompatActivity() {
                 adapter = recommendationAdapter
                 setHasFixedSize(true)
                 layoutManager =
-                    LinearLayoutManager(this@FavoriteDetailActivity, LinearLayoutManager.HORIZONTAL, false)
+                    LinearLayoutManager(
+                        this@FavoriteDetailActivity,
+                        LinearLayoutManager.HORIZONTAL,
+                        false
+                    )
                 recommendationAdapter.setData(res.data?.meals)
             }
             recommendationAdapter.setOnItemClickCallback(object :
@@ -77,6 +74,6 @@ class FavoriteDetailActivity : AppCompatActivity() {
     }
 
     companion object {
-        const val EXTRA_FAVORITE_GAME = "favorite_game"
+        const val EXTRA_FAVORITE_MEAL = "favorite_meal"
     }
 }
