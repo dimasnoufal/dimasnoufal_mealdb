@@ -46,6 +46,7 @@ class FavoriteActivity : AppCompatActivity() {
                             val detailFavorite = Intent(this@FavoriteActivity, FavoriteDetailActivity::class.java)
                             detailFavorite.putExtra(FavoriteDetailActivity.EXTRA_FAVORITE_MEAL,data)
                             startActivity(detailFavorite)
+                            finish()
                         }
                     })
                 }

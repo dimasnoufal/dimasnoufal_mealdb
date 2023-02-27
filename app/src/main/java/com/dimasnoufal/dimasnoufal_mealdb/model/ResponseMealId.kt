@@ -14,9 +14,6 @@ data class ResponseMealId(
 @Parcelize
 data class MealsItemId(
 
-//	@field:SerializedName("strImageSource")
-//	val strImageSource: Any? = null,
-
 	@field:SerializedName("strIngredient10")
 	val strIngredient10: String? = null,
 
@@ -49,9 +46,6 @@ data class MealsItemId(
 
 	@field:SerializedName("strArea")
 	val strArea: String? = null,
-
-//	@field:SerializedName("strCreativeCommonsConfirmed")
-//	val strCreativeCommonsConfirmed: Any? = null,
 
 	@field:SerializedName("strIngredient19")
 	val strIngredient19: String? = null,
@@ -118,12 +112,6 @@ data class MealsItemId(
 
 	@field:SerializedName("strMeasure11")
 	val strMeasure11: String? = null,
-
-//	@field:SerializedName("dateModified")
-//	val dateModified: Any? = null,
-//
-//	@field:SerializedName("strDrinkAlternate")
-//	val strDrinkAlternate: Any? = null,
 
 	@field:SerializedName("strSource")
 	val strSource: String? = null,

@@ -106,7 +106,7 @@ class DetailActivity : AppCompatActivity() {
     private fun isFavoriteMeal(mealSelected: MealsItemList) {
         detailViewModel.favoriteMealList.observe(this@DetailActivity) { res ->
             val meal = res.find { fav ->
-                fav.meal!!.idMeal == mealSelected.idMeal // Gati mealId denga mealSelected, dibagian fav nya yang awalnya ResponseMeaId diganti jadi MealItemId
+                fav.meal!!.idMeal == mealSelected.idMeal
             }
             if (meal != null) {
                 binding.btnAddFavorite.apply {

@@ -32,19 +32,11 @@ class FavoriteAdapter : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MealEntity) {
             binding.apply {
-//                val result = item.meal.meals
-//                for (dataMeal in result!!) {
-//                    Glide.with(itemView.context)
-//                        .load(dataMeal!!.strMealThumb)
-//                        .error(R.drawable.img_placeholder)
-//                        .into(ivPoster)
-//                    tvMeal.text = dataMeal!!.strMeal
                 Glide.with(itemView.context)
                         .load(item.meal?.strMealThumb)
                         .error(R.drawable.img_placeholder)
                         .into(ivPoster)
                     tvMeal.text = item.meal?.strMeal
-//                }
                 itemView.setOnClickListener {
                     onFavoriteItemCallBack.onFavoriteItemClickCallback(item)
                 }
